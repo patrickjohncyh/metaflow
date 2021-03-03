@@ -229,7 +229,7 @@ def step(
         ],
     }
 
-    env_deco = [deco for deco in node.decorators if deco.name == "environment"]
+    env_deco = [deco for deco in node.decorators if deco.name == "env"]
     if env_deco:
         env = env_deco[0].attributes["vars"]
     else:

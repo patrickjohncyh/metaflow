@@ -24,7 +24,7 @@ class EnvironmentDecorator(StepDecorator):
     vars : Dict
         Dictionary of environment variables to add/update prior to executing your step.
     """
-    name = 'environment'
+    name = 'env'
     defaults = {'vars': {}}
 
     def step_init(self, flow, graph, step, decos, environment, datastore, logger):
