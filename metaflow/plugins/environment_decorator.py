@@ -28,4 +28,7 @@ class EnvironmentDecorator(StepDecorator):
     defaults = {'vars': {}}
 
     def step_init(self, flow, graph, step, decos, environment, datastore, logger):
-        os.environ.update(self.attributes['vars'].items())
+        # os.environ.update(self.attributes['vars'].items())
+        # Above causesd bug because metaflow initalizes ALL decorators
+        # It is not very useful anyways ( env vars are already loaded in env by Batch)
+        pass
